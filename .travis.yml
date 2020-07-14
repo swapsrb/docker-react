@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - dcoker
+
+before_install:
+  - docker build -t swapnil/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true swapnil/docker-react npm run test -- --coverage
+
+language: generic
