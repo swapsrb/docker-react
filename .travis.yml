@@ -1,6 +1,6 @@
 sudo: required
 services:
-  - dcoker
+  - docker
 
 before_install:
   - docker build -t swapnil/docker-react -f Dockerfile.dev .
